@@ -3,6 +3,5 @@
 def read_file(filename=""):
     """Define a function the read text from a file"""
 
-    with open("my_file_0.txt") as flin:
-        f = flin.read()
-        print(f)
+    with open("my_file_0.txt", encoding='utf-8') as flin:
+        print(flin.read(), end=" ")
