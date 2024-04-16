@@ -19,13 +19,12 @@ class BaseGeometry:
         self.name = name
         self.value = value
 
+
 class Rectangle(BaseGeometry):
     """An inherited call Rectangle"""
 
     def __init__(self, width, height):
         """initialise a constructor"""
-        self.__width = 0
-        self.__height = 0
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
