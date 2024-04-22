@@ -1,18 +1,6 @@
 #!/usr/bin/puthon3
 """rectangle.py module"""
-
-
-class Base:
-    """A class Base"""
-
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -72,3 +60,36 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        return self.__width * self.__height
+
+    def display(self):
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
+            print("#" * self.__width)
+
+    def __str__(self):
+        return f"[Rectangle] ({id(self)}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args, **kwargs):
+        if args:
+            if len(args) >= 1:
+                self.__id = args[0]
+            if len(args) >= 2:
+                self.__width = args[1]
+            if len(args) >= 3:
+                self.__height = args[2]
+            if len(args) >= 4:
+                self.__x = args[3]
+            if len(args) >= 5:
+                self.__y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
