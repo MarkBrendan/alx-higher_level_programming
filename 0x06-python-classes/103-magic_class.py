@@ -9,6 +9,8 @@ class MagicClass:
     def __init__(self, radius):
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number")
+        if radius < 0 or radius is None:
+            raise TypeError("missing 1 required positional argument")
         self.__radius = radius
 
     def area(self):
