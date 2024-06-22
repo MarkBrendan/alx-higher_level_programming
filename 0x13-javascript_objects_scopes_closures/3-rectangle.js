@@ -7,15 +7,16 @@ class Rectangle {
     } else {
       this.width = w;
       this.height = h;
-      }
+    }
   }
-  print() {
+
+  print () {
     for (let i = 0; i < this.height; i++) {
-      let str = "";
+      let str = '';
       for (let j = 0; j < this.width; j++) {
         str += 'X';
       }
-    console.log(str);
+      console.log(str);
     }
   }
 }
