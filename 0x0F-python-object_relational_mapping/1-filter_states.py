@@ -13,7 +13,7 @@ if __name__ == "__main__":
     """Create an cursor object"""
     cont = db.cursor()
     cont.execute("SELECT * FROM states "
-                 "WHERE name LIKE 'N%' ORDER BY states.id ASC")
+                 "WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
 
     """Fetch all rows"""
     get_all = cont.fetchall()
