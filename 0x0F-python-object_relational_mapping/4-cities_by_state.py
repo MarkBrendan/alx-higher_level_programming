@@ -13,7 +13,9 @@ if __name__ == "__main__":
 
     """Create an cursor object"""
     cont = db.cursor()
-    cont.execute("SELECT id, name FROM cities ORDER BY cities.id ASC")
+    cont.execute("SELECT cities.id, cities.name, states.name FROM cities "
+                 "JOIN states ON cities.state_id = states.id ORDER BY "
+                 "cities.id ASC")
 
     """Fetch all rows"""
     get_all = cont.fetchall()
