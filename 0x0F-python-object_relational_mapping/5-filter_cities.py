@@ -22,8 +22,8 @@ if __name__ == "__main__":
 
     """Fetch all rows"""
     get_all = cont.fetchall()
-    for i in get_all:
-        print(i)
+    city_name = ', '.join([i[0] for i in get_all])
+    print(city_name)
 
     """Close cursor and database connection"""
     cont.close()
