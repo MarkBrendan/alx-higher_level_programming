@@ -22,6 +22,5 @@ if __name__ == '__main__':
     session.query(State).filter(State.id == 2).update({'name': 'New Mexico'})
     session.commit()
 
-
     """close the session"""
     session.close()
