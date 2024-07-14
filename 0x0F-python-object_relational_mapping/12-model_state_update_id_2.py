@@ -20,6 +20,7 @@ if __name__ == '__main__':
 
     """update the name"""
     session.query(State).filter(State.id == 2).update({'name': 'New Mexico'})
+    session.commit()
 
 
     """close the session"""
