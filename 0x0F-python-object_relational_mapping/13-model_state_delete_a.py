@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     for result in results:
         session.delete(result)
-        session.commit()
+    session.commit()
 
     """close the session"""
     session.close()
