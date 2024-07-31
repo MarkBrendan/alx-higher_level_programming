@@ -18,5 +18,5 @@ if __name__ == '__main__':
 
         """print out the content"""
 
-        print("Body response: \n\t - type: {}\n\t - content: {}\n\t - utf8
-              content: {}".format(type(body), body, body.decode('utf-8')))
+        print("Body response: \n\t - type: {}\n\t - content: {}\n\t - utf8"
+              "content: {}".format(type(body), body, body.decode('utf-8')))
