@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""0-hbtn_status.py module"""
+"""A script that
+- fetches https://alx-intranet.hbtn.io/status.
+- uses urlib package
+"""
 
 
 import urllib.request
