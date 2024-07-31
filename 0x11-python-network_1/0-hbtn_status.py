@@ -12,6 +12,5 @@ if __name__ == '__main__':
 
         """read the page and print out the content"""
         body = r.read()
-        print("Body response:")
-        print("\t - type: {}\n \t - content: {}\n \t - utf8 content: {}"
-              .format(type(body), body, body))
+        print("Body response:\n\t - type: {}\n\t - content: {}\n\t - utf8 content: {}"
+              .format(type(body), body, body.decode('utf-8')))
