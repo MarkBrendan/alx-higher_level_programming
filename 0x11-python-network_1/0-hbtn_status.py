@@ -5,10 +5,8 @@
 """
 
 
-import urllib.request
-
-
 if __name__ == '__main__':
+    import urllib.request
 
     """request the page and open it with urlopen"""
 
