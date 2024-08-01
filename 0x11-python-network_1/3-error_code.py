@@ -10,6 +10,7 @@ if __name__ == '__main__':
 
     import urllib.request
     import sys
+    import urllib.error
 
     url = sys.argv[1]
 
