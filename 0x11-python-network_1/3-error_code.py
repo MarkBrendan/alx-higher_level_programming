@@ -14,9 +14,8 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
 
-    with urllib.request.urlopen(url) as body:
-        try:
-            body
-        except urllib.error.HTTPError as e:
-            decode_body = e.read().decode()
-            print("Error code: {}".format(decode_body.code))
+    try:
+        urllib.request.urlopen(url) as body:
+    except urllib.error.HTTPError as e:
+        decode_body = e.read().decode()
+        print("Error code: {}".format(decode_body.code))
