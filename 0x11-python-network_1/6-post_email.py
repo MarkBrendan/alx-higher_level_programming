@@ -11,7 +11,7 @@ if __name__ == '__main__':
     import sys
 
     url = sys.argv[1]
-    mail = sys.argv[2]
+    mail = {'email': sys.argv[2]}
 
     data = requests.post(url, email=mail)
     print("{}".format(data.text))
