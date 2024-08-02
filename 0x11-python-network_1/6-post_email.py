@@ -14,4 +14,4 @@ if __name__ == '__main__':
     mail = sys.argv[2]
 
     data = requets.post(url, email=mail)
-        print("{}".format(data.text)
+    print("{}".format(data.text))
